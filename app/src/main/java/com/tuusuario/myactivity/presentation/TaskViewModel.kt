@@ -20,6 +20,7 @@ class TaskViewModel @Inject constructor(
 
     init {
         loadTasks()
+
     }
 
     fun loadTasks() {
