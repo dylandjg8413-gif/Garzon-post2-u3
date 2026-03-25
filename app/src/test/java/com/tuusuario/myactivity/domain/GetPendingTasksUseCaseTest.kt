@@ -10,6 +10,7 @@ import org.junit.Test
 
 class GetPendingTasksUseCaseTest {
     // Repositorio fake local para los tests
+
     private class FakeRepo(private val tasks: List<Task>) : TaskRepository {
         override suspend fun getAllTasks() = tasks
         override suspend fun addTask(title: String) {}
