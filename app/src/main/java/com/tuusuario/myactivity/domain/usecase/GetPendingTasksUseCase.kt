@@ -7,6 +7,7 @@ class GetPendingTasksUseCase(private val repository: TaskRepository) {
     suspend operator fun invoke(): List<Task> {
         return repository.getAllTasks()
             .filter { !it.completed } // Solo tareas pendientes
+
             .sortedByDescending { it.id } // Más recientes primero
     }
 }
